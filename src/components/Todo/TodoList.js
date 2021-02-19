@@ -5,15 +5,14 @@ import { observer } from 'mobx-react-lite';
 import store from "../../store/TodoStore";
 
 const TodoList = observer(() => {
+    const { sortedTasks } = store;
     return (
-        <ul>
-            {store.todos.map((todo, index) => {
+        <ul className='todos'>
+            {sortedTasks.map((task) => {
                 return (
                     <TodoItem
-                        todo={todo}
-                        key={todo.id}
-                        index={index}
-                        title={todo.title}
+                        todo={task}
+                        key={task.id}
                     />
                 )
             })}
