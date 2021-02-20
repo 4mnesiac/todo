@@ -1,0 +1,173 @@
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font: 14px Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  background: #f5f5f5;
+  color: #4d4d4d;
+  min-width: 230px;
+  max-width: 600px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300; }
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 80%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  button:focus {
+    outline: 0; }
+  button:hover {
+    cursor: pointer;
+    transform: scale(1.2); }
+
+.App {
+  padding: 3rem 0;
+  border-radius: 15px;
+  margin: 40px auto;
+  box-shadow: -10px -5px 15px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  background-color: #18a4f6;
+  background: radial-gradient(circle, #07b3f2 10%, #18a4f6 63%, #0064b8 100%); }
+  @media screen and (max-width: 678px) {
+    .App {
+      max-width: 90%; } }
+  .App .App__heading {
+    font-size: 64px;
+    text-align: center;
+    font-weight: 100;
+    color: #f7feff;
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility; }
+    @media screen and (max-width: 678px) {
+      .App .App__heading {
+        font-size: 46px; } }
+  .App .App__container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center; }
+
+.todos__form {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  border-bottom: 1px solid #ededed;
+  background: #fffeff;
+  font-size: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  line-height: 1.4em;
+  color: inherit;
+  margin: 0 auto;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .todos__form button {
+    margin-right: 16px; }
+    @media screen and (max-width: 678px) {
+      .todos__form button {
+        margin-right: 12px; } }
+  .todos__form input {
+    padding: 24px 0;
+    width: 85%;
+    padding-left: 16px;
+    border: none;
+    outline: none;
+    font-size: 18px; }
+    @media screen and (max-width: 678px) {
+      .todos__form input {
+        font-size: 14px;
+        padding-left: 12px; } }
+    .todos__form input::-webkit-input-placeholder {
+      font-style: italic;
+      font-weight: 300;
+      color: #737373; }
+    .todos__form input::-moz-placeholder {
+      font-style: italic;
+      font-weight: 300;
+      color: #737373; }
+    .todos__form input::input-placeholder {
+      font-style: italic;
+      font-weight: 300;
+      color: #737373; }
+
+.todos {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.todo {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fffeff;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  line-height: 1.4em;
+  border: none;
+  border-bottom: 1px solid #ededed;
+  color: inherit;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  @media screen and (max-width: 678px) {
+    .todo {
+      padding: 12px; } }
+  .todo.todo_completed {
+    background: #ededed;
+    color: #969595;
+    border-bottom: 1px solid #ededed; }
+    .todo.todo_completed p {
+      text-decoration: line-through; }
+  .todo .todo__wrapper {
+    display: flex;
+    width: 90%;
+    align-items: center; }
+  .todo .todo__text {
+    margin: 0;
+    padding: 0;
+    max-width: 85%;
+    overflow: hidden; }
+    @media screen and (max-width: 678px) {
+      .todo .todo__text {
+        font-size: 18px; } }
+  .todo:last-child {
+    border-bottom: none; }
+  .todo .todo__checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ededed;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-right: 12px;
+    outline: none;
+    cursor: pointer; }
+    .todo .todo__checkbox:checked {
+      background-color: #ededed;
+      background-image: url("../images/check.svg");
+      background-repeat: no-repeat;
+      background-position: center; }
+
+.phone-btn {
+  width: 75px;
+  height: 75px;
+  margin-top: 1.5rem; }

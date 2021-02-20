@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TodoItem from "./TodoItem";
-import { observer } from 'mobx-react-lite';
-import store from "../../store/TodoStore";
+import { observer } from 'mobx-react';
+import store from "../store/TodoStore";
 
 const TodoList = observer(() => {
     const { sortedTasks } = store;

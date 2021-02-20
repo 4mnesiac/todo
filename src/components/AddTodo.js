@@ -1,40 +1,31 @@
 import { Observer, useLocalObservable } from "mobx-react";
 import React from "react";
-// import { useState } from 'react';
 import PropTypes from "prop-types";
 
 const AddTodo = (props) => {
-    // const [input, setInput] = useState('');
-
-    // const addTask = () => {
-    //     if (input.trim()) {
-    //         props.addTodo(input)
-    //         setInput('');
-    //     } 
-    // }
     const input = useLocalObservable(() => ({
         value: ''
     }))
-
     const submitHandler = (event) => {
         event.preventDefault();
-        // addTask()
         if (input.value.trim())
-            props.addTodo(input.value)
+            props.addTodo(input.value);
+        input.value = '';
     }
-
     const inputChange = event => {
-        // setInput(event.target.value);
         input.value = event.target.value;
     };
 
     return (
         <Observer>
             {() => (
-                <form className='task-input' onSubmit={submitHandler}>
+                <form className='todos__form' onSubmit={submitHandler}>
                     <input
                         onChange={(e) => inputChange(e)}
-
+                        placeholder="Add new goal"
+                        value={input.value}
+                        minLength="2"
+                        maxLength="100"
                     />
                     <button>➕</button>
                 </form>

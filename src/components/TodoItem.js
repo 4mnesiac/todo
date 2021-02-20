@@ -1,31 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import store from '../../store/TodoStore'
-import { observer } from 'mobx-react-lite';
-
-
+import store from '../store/TodoStore'
+import { observer } from 'mobx-react';
 
 
 const TodoItem = observer(({ todo }) => {
-    const classes = ['task']
+    const classes = ['todo']
     if (todo.completed) {
-        classes.push('task-done')
+        classes.push('todo_completed')
     }
 
     return (
         <li className={classes.join(' ')}>
-            <span className="task-wrapper">
+            <span className="todo__wrapper">
                 <input
-                    className="task-check"
+                    className="todo__checkbox"
                     type='checkbox'
                     checked={todo.completed}
                     onChange={() => store.toggleTodo(todo)}
-                    placeholder="Add new goal"
                 />
-                {todo.title}
+                <p className="todo__text">{todo.title}</p>
             </span>
-
-            <button className='action-btn' onClick={() => store.removeTodo(todo.id)}>
+            <button className='todo__btn_remover' onClick={() => store.removeTodo(todo.id)}>
                 ❌
             </button>
         </li>
