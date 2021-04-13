@@ -1,21 +1,23 @@
-import React from 'react';
-import TodoList from './components/TodoList';
-import AddTodo from './components/AddTodo';
-import store from './store/TodoStore';
-import phoneBtn from './images/phone-btn.png';
+import React from "react";
+import TodoList from "./components/TodoList";
+import AddTodo from "./components/AddTodo";
+import store from "./store/Store";
+import { Container } from '@material-ui/core';
 
 
 function App() {
   return (
+    <Container maxWidth="sm">
     <div className="App">
       <h1 className="App__heading">Todos</h1>
       <div className="App__container">
-        <AddTodo addTodo={v => store.addTodo(v)} />
+        <AddTodo addTodo={(v) => store.addTodo(v)} />
         <TodoList todos={store.todos} />
-        <img className="phone-btn" src={phoneBtn} alt="Btn 4 fun" title="It's here for fun :)" />
       </div>
     </div>
+    </Container>
   );
 }
 
 export default App;
+

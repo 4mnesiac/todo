@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoItem from "./TodoItem";
 import { observer } from 'mobx-react';
-import store from "../store/TodoStore";
+import store from "../store/Store";
 
 const TodoList = observer(() => {
     const { sortedTasks } = store;

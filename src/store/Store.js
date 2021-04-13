@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 import PropTypes from 'prop-types';
 
-class TodoStore {
+class Store {
     todos = [
         { id: 1, completed: false, title: 'Think about' },
         { id: 2, completed: false, title: 'Listen story' },
@@ -47,11 +47,11 @@ class TodoStore {
     }
 }
 
-TodoStore.propTypes = {
+Store.propTypes = {
     todos: PropTypes.arrayOf(PropTypes.object).isRequired,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool,
 }
 
-export default new TodoStore();
+export default new Store();
