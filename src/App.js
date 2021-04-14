@@ -7,11 +7,11 @@ import { Container } from '@material-ui/core';
 
 function App() {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="xl">
     <div className="App">
       <h1 className="App__heading">Todos</h1>
       <div className="App__container">
-        <AddTodo addTodo={(v) => store.addTodo(v)} />
+        <AddTodo addTask={(v) => store.addTodo(v)} />
         <TodoList todos={store.todos} />
       </div>
     </div>

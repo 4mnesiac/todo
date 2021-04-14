@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import store from "../store/Store";
 import { observer } from "mobx-react";
 import { Button } from "@material-ui/core";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { createStyles, makeStyles } from "@material-ui/core/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
 
 const useStyles = makeStyles((theme) =>
